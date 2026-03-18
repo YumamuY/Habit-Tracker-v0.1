@@ -9,7 +9,7 @@
  * @property {Record<string, boolean>} records
  */
 
-const STORAGE_KEY = "habitTracker.v0"; // per blueprint :contentReference[oaicite:4]{index=4}
+const STORAGE_KEY = "habitTracker.v0"; // per blueprint
 
 /**
  * Load habits from localStorage. Returns [] if nothing is stored or parsing fails.

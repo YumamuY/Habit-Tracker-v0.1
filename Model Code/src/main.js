@@ -15,7 +15,8 @@ import { renderApp } from "./ui.js";
  */
 
 /**
- * App state lives here (main.js) per blueprint. :contentReference[oaicite:11]{index=11}
+ * App state lives here (main.js) per blueprint.
+ * 
  * @type {{ habits: Habit[]; todayKey: string; error: string | null }}
  */
 const state = {
@@ -40,7 +41,8 @@ function render() {
 
 /**
  * Update habits, persist to localStorage, then rerender.
- * This keeps the “after any change → save + render” rule in one place. :contentReference[oaicite:12]{index=12}
+ * This keeps the “after any change → save + render” rule in one place.
+ * This centralizes what should happen every time the habits list changes (added, toggled, or deleted).
  * @param {Habit[]} nextHabits
  */
 function setHabits(nextHabits) {
@@ -60,8 +62,9 @@ function clearError() {
 }
 
 /**
- * Add habit handler.
- * Validate name: must be non-empty after trim. :contentReference[oaicite:13]{index=13}
+ * Add habit handler. Runs when the user submits the form to add a new habit.
+ * Validate name: must be non-empty after trim.
+ * 
  * @param {string} name
  * @param {string} category
  */
@@ -99,7 +102,8 @@ function onDeleteHabit(habitId) {
 }
 
 /**
- * Boot sequence (todayKey → loadHabits → render) per blueprint. :contentReference[oaicite:14]{index=14}
+ * Boot sequence (todayKey → loadHabits → render) per blueprint.
+ * 
  */
 function boot() {
   state.todayKey = getTodayKey();

@@ -1,7 +1,7 @@
 // @ts-check
 
 /**
- * Pure logic only (NO DOM access) per blueprint. :contentReference[oaicite:5]{index=5}
+ * Pure logic only (NO DOM access) per blueprint.
  */
 
 /**
@@ -15,7 +15,7 @@
 
 /**
  * Create a new Habit object.
- * Uses crypto.randomUUID() as recommended by the blueprint. :contentReference[oaicite:6]{index=6}
+ * Uses crypto.randomUUID() as recommended by the blueprint.
  * @param {string} name
  * @param {string} category
  * @param {string} todayKey
@@ -33,7 +33,7 @@ export function createHabit(name, category, todayKey) {
 
 /**
  * Toggle completion for one habit on a specific date key.
- * Returns a NEW array (immutable update) per blueprint. :contentReference[oaicite:7]{index=7}
+ * Returns a NEW array (immutable update) per blueprint.
  * @param {Habit[]} habits
  * @param {string} habitId
  * @param {string} dateKey

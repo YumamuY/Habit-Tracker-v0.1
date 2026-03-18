@@ -29,7 +29,7 @@ const CATEGORIES = ["Health", "Study", "Exercise", "Mindfulness", "Other"];
 
 /**
  * Render the whole app into the root element.
- * UI stays stateless: it renders from state and calls handlers (main owns state). :contentReference[oaicite:8]{index=8}
+ * UI stays stateless: it renders from state and calls handlers (main owns state). 
  * @param {HTMLElement} rootEl
  * @param {AppState} state
  * @param {AppHandlers} handlers
@@ -80,7 +80,7 @@ export function renderApp(rootEl, state, handlers) {
 
   if (!form || !listEl) return;
 
-  // Add habit (validate trimmed, non-empty name) :contentReference[oaicite:9]{index=9}
+  // Add habit (validate trimmed, non-empty name)
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -96,7 +96,7 @@ export function renderApp(rootEl, state, handlers) {
     input?.focus();
   });
 
-  // Event delegation for toggle + delete (preferred) :contentReference[oaicite:10]{index=10}
+  // Event delegation for toggle + delete (preferred)
   listEl.addEventListener("change", (e) => {
     const target = e.target;
     if (!(target instanceof HTMLInputElement)) return;
